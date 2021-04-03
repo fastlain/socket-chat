@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {UserContext} from './userContext';
-
+import './App.scss';
 import UserInfo from './UserInfo';
 import Login from './Login';
 import Messages from './Messages';
@@ -12,16 +12,18 @@ function App() {
   const isUserLoggedIn = Boolean(user?.id);
 
   return (
-    <>
-      <h1>Chat App</h1>
-      {isUserLoggedIn ?  
-      (<>
-        <UserInfo />
-        <Messages />
-        <MessageInput />
-      </>
-      ) : <Login/>}
-    </>
+    <div className='app'>
+      <h1>Socket Chat</h1>
+      <div className='app-content'>
+        {isUserLoggedIn ?  
+          (<>
+            <UserInfo />
+            <Messages />
+            <MessageInput />
+          </>
+          ) : <Login/>}
+      </div>
+    </div>
   );
 }
 

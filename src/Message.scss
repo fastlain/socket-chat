@@ -1,0 +1,26 @@
+@import './_variables';
+
+.message {
+  color: $font-color-secondary;
+  align-self: flex-start;
+  margin: 0.2rem;
+}
+
+.message.owned {
+  align-self: flex-end;
+}
+
+.content {
+  background-color: $lightblue;
+  padding: 0.1rem 0.25rem;
+}
+
+.content.owned {
+  background-color: $pink;
+}
+
+.username {
+  display: block;
+  font-size: 0.75rem;
+  color: $font-color;
+}

@@ -1,0 +1,31 @@
+@import './_variables';
+
+.login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+
+  > label {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  } 
+
+  .input-wrapper {
+    margin: 1rem 0 2rem;
+
+    > input {      
+      margin: 0.75rem 0 0.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  .error {
+    color: $error;
+    display: block;
+    height: 1rem;
+  }
+}

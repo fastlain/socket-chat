@@ -1,0 +1,17 @@
+@import './_variables';
+
+.userInfo {
+  text-align: center;
+  position: relative;
+
+  > h3 span{
+    color: $lightblue;
+  }
+
+  > button {
+    font-size: 0.75rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

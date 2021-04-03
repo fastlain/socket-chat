@@ -1,0 +1,52 @@
+@import './_variables';
+
+.app {
+  color: $font-color;
+  font-family: $font-stack;
+
+  > h1 {
+    text-align: center;
+    padding-top: 0.5rem;
+    color: $font-color-secondary;
+    font-family: $font-display-stack;
+    font-size: 2.5rem;
+  }
+}
+
+.app-content {
+  background: black;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 90%;
+  border-radius: $border-radius;
+  height: 80vh;
+}
+
+input {
+  background: black;
+  color: $font-color;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 3px solid $pink;
+
+  &:focus {
+    outline: none;
+    border-radius: $border-radius;
+    box-shadow: $focus-outline;
+  }
+}
+
+button {
+  background: $green;
+  color: $font-color-secondary;
+  border: none;
+  border-radius: $border-radius;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5em;
+
+  &:focus, &:hover {
+    outline: none;
+    box-shadow: $focus-outline;
+  }
+}

@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(90deg,#5AE3FF -1.53%,#A7FF7B 28.91%,#FFFD62 64.18%,#FF6AE6 100%),#5AE3FF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}

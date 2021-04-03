@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from './userContext';
+import './Login.scss'
 
 function Login() {
   const [userInput, setUserInput] = useState('');
@@ -9,7 +10,7 @@ function Login() {
   const handleSubmit = e => {
     e.preventDefault();
     if (!userInput) {
-      setError('Username is required!');
+      setError('Name is required');
     } else {
       login(userInput);
     }
@@ -20,13 +21,15 @@ function Login() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="user-input">
-        Username:
-        <span>{error}</span>
+    <form className='login' onSubmit={handleSubmit}>
+      <label htmlFor='user-input'>
+        Enter Your Name:
       </label>
-      <input id="user-input" name="user-input" value={userInput} onChange={handleInputChange} />
-      <button type="submit" >Submit</button>
+      <div className='input-wrapper'>
+        <input id="user-input" name='user-input' value={userInput} onChange={handleInputChange} autoFocus />
+        <span className='error'>{error}</span>
+      </div>
+      <button type="submit">Submit</button>
     </form>
   );
 }

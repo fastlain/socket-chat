@@ -1,0 +1,17 @@
+@import './_variables';
+
+.messageInput {
+  text-align: center;
+  margin: 0 auto;
+
+  > input {
+    width: 75%;
+    max-width: 300px;
+    font-size: 1.15rem;
+  }
+  > button {
+    background-color: $yellow;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+  }
+}

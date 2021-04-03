@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from './userContext';
 import { SocketContext, channel } from './socket'
+import './MessageInput.scss';
 
 function MessageInput() {
   const socket = useContext(SocketContext);
@@ -20,8 +21,8 @@ function MessageInput() {
   }
 
   return (
-    <form onSubmit={handleSend}>
-      <input onChange={handleInput} value={input}></input>
+    <form className='messageInput' onSubmit={handleSend}>
+      <input autoFocus onChange={handleInput} value={input}></input>
       <button type="submit" disabled={!input}>SEND</button>
     </form>
   );
