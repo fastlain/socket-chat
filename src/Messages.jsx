@@ -31,7 +31,7 @@ function Messages() {
       <h3>Messages</h3>
       <button onClick={clearMessages}>Clear</button>
       <ul>
-        {messages.map((msg, i) => <li key={i}>{msg}</li>)}
+        {messages.map((msg, i) => <li key={i}>{msg.content}</li>)}
       </ul>
     </>
   );

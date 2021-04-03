@@ -1,8 +1,10 @@
 import React, { useState, useContext } from 'react';
+import { UserContext } from './userContext';
 import { SocketContext, channel } from './socket'
 
 function MessageInput() {
   const socket = useContext(SocketContext);
+  const { user } = useContext(UserContext)
   const [input, setInput] = useState('')
 
   const handleInput = (e) => {
@@ -12,7 +14,7 @@ function MessageInput() {
   const handleSend = e => {
     e.preventDefault()
     if (input) {
-      socket.emit('message', input, channel);
+      socket.emit('message', { content: input, user }, channel);
       setInput('');
     }
   }

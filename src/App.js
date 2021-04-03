@@ -6,15 +6,15 @@ import Login from './Login';
 import Messages from './Messages';
 import MessageInput from './MessageInput';
 
-// const channel = 'code-test';
-
 function App() {
   const {user} = useContext(UserContext);
+
+  const isUserLoggedIn = Boolean(user?.id);
 
   return (
     <>
       <h1>Chat App</h1>
-      {user ?  
+      {isUserLoggedIn ?  
       (<>
         <UserInfo />
         <Messages />

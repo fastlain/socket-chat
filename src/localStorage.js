@@ -1,9 +1,9 @@
 export function getLocalUser() {
-    return localStorage.getItem('user');
+    return JSON.parse(localStorage.getItem('user'));
 }
 
 export function saveLocalUser(user) {
-    localStorage.setItem('user', user)
+    localStorage.setItem('user',  JSON.stringify(user));
 }
 
 export function getLocalMessages() {
