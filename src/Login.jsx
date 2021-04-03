@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { UserContext } from './userContext';
 
-function UserInput({ setUser }) {
+function Login() {
   const [userInput, setUserInput] = useState('');
   const [error, setError] = useState('');
+  const { login } = useContext(UserContext);
 
   const handleSubmit = e => {
     e.preventDefault();
     if (!userInput) {
       setError('Username is required!');
     } else {
-      setUser(userInput);
+      login(userInput);
     }
   }
 
@@ -29,4 +31,4 @@ function UserInput({ setUser }) {
   );
 }
 
-export default UserInput;
+export default Login;
