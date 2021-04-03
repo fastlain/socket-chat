@@ -7,9 +7,7 @@ function Messages() {
   const [messages, setMessages] = useState(getLocalMessages() || []);
 
   useEffect(() => {
-    socket.on('connect', () => {
       socket.emit('join-channel', channel);
-    })
     socket.on('error', (e) => {
       console.error(e);
     });
