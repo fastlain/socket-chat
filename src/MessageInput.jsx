@@ -6,19 +6,21 @@ function MessageInput() {
   const [input, setInput] = useState('')
 
   const handleInput = (e) => {
-    setInput(e.target.value)
+    setInput(e.target.value);
   }
 
   const handleSend = e => {
     e.preventDefault()
-    socket.emit('message', input);
-    setInput('');
+    if (input) {
+      socket.emit('message', input);
+      setInput('');
+    }
   }
 
   return (
     <form onSubmit={handleSend}>
       <input onChange={handleInput} value={input}></input>
-      <button type="submit">SEND</button>
+      <button type="submit" disabled={input}>SEND</button>
     </form>
   );
 }
