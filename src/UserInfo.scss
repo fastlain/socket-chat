@@ -15,3 +15,9 @@
     right: 0;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .userInfo {
+    text-align: left;
+  }
+}

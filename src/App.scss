@@ -3,6 +3,7 @@
 .app {
   color: $font-color;
   font-family: $font-stack;
+  height: 100vh;
 
   > h1 {
     text-align: center;
@@ -13,13 +14,19 @@
   }
 }
 
+@media screen and (max-height: 500px) {
+  .app > h1 {
+    font-size: 1.5rem;
+  }
+}
+
 .app-content {
   background: black;
   margin: 0 auto;
   padding: 1rem;
   width: 90%;
   border-radius: $border-radius;
-  height: 80vh;
+  height: 75%;
 }
 
 input {
